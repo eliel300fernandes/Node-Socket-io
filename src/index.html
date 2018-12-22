@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link href="css/default.css" />
+    <!-- angular -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <!-- real time chat with Node + Socket.io -->
+    <h1>Socket.io</h1>
+    <script src="/socket/socket.io.js"></script>
+
+    <script></script>
+
+    <!-- mensgaem -->
+    <div id="mensagem"></div>
+
+    <!-- socket.io -->
+    <script>
+      const socket = io();
+      socket.on("Connect", function() {
+        console.log(socket);
+        $("#mensagem").append("connected with id: " + socket.id + "</br>");
+        socket.emit("mensagem", "Eu estou conectado" + socket.id);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  font-family: "Roboto", "Calibri", sans-serif;
+}
+body {
+  background: #f1f2f3;
+}
+.color-red {
+  color: #a5555c;
+}
